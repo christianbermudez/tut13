@@ -21,7 +21,7 @@ app.use(express.static(path.join(__dirname, "public")));
 app.use(express.urlencoded({ extended: false }));
 
 // Starting the server
-app.listen(3000, () => {
+app.listen(process.env.PORT || 3000, () => {
   console.log("Server started (http://localhost:3000/) !");
 });
 
